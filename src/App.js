@@ -23,15 +23,15 @@ function App() {
 
    } else if 
    (
-   (userChoice === 0 && ai === 1) ||
-   (userChoice === 1 && ai === 0) ||
-   (userChoice === 2 && ai === 1)
+   (userChoice === 0 && ai === 2) || // rock beats scissir
+   (userChoice === 1 && ai === 0) ||// paper beats rock
+   (userChoice === 2 && ai === 1)  // scissors beats paper
   ){
     setResult("Win");
   } else {
     setResult("lose");
   }
-  };
+};
 
      return (
           <div className="App">
@@ -41,8 +41,20 @@ function App() {
         <button onClick={() => play(0)}>Rock</button>
         <button onClick={() => play(1)}>Paper</button>
         <button onClick={() => play(2)}>Scissors</button>
-         </div>
-  );
+
+        <p>Your choice: {choice !== null ? ["Rock","Paper","Scissors"][choice] : "None"}</p>
+        <p>AI's choice: {aiChoice !== null ? ["Rock","Paper","Scissors"][aiChoice] : "None"}</p>
+        <p>Result: {result}</p>
+
+
+
+
+
+        
+     </div>
+);
+        
+  
 }
 
 export default App;
