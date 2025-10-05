@@ -35,15 +35,15 @@ function App() {
 
      return (
           <div className="App">
-        <h1>Play Rock, Paper, Scissors </h1>
+        <h1>Play Rock,Paper, Scissors </h1>
 
         <p>What's your choice?</p>
         <button onClick={() => play(0)}>Rock</button>
         <button onClick={() => play(1)}>Paper</button>
         <button onClick={() => play(2)}>Scissors</button>
 
-        <p>Your choice: {choice !== null ? ["Rock","Paper","Scissors"][choice] : "None"}</p>
-        <p>AI's choice: {aiChoice !== null ? ["Rock","Paper","Scissors"][aiChoice] : "None"}</p>
+        <p>You: {choice !== null ? ["Rock","Paper","Scissors"][choice] : "None"}</p>
+        <p>Ai: {aiChoice !== null ? ["Rock","Paper","Scissors"][aiChoice] : "None"}</p>
         <p>Result: {result}</p>
 
 
