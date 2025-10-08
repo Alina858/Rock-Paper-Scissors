@@ -23,7 +23,7 @@ function App() {
 
    } else if 
    (
-   (userChoice === 0 && ai === 2) || // rock beats scissir
+   (userChoice === 0 && ai === 2) || // rock beats scissors
    (userChoice === 1 && ai === 0) ||// paper beats rock
    (userChoice === 2 && ai === 1)  // scissors beats paper
   ){
@@ -42,9 +42,9 @@ function App() {
         <button onClick={() => play(1)}>Paper</button>
         <button onClick={() => play(2)}>Scissors</button>
 
-        <p>You: {choice !== null ? ["Rock","Paper","Scissors"][choice] : "None"}</p>
-        <p>Ai: {aiChoice !== null ? ["Rock","Paper","Scissors"][aiChoice] : "None"}</p>
-        <p>Result: {result}</p>
+        <p className="player">Player   {choice !== null ? ["Rock","Paper","Scissors"][choice] : "None"}</p>
+        <p className="ai">Ai        {aiChoice !== null ? ["Rock","Paper","Scissors"][aiChoice] : "None"}</p>
+        <p className="resolution">Result {result}</p>
 
 
 
